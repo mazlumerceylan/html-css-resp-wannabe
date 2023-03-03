@@ -78,7 +78,7 @@ img {
 /* LESSONS SECTION */
 .lessons .col {
     width: 50%;
-}^
+}
 
 .lessons .col img {
     height: 200px;
@@ -127,20 +127,51 @@ img {
 /************************************************
     SOLUZIONE RESPONSIVE
  ************************************************/
-.container{
-    max-width: 768px;
-}
 
-@media screen and (min-width:768px) {
+@media screen and (min-width:768px){
+    .container{
+        max-width: 100%;
+        width: 100%;
+    }
     .container h2{
         text-align: center;
     }
-    .col{
+    .container .row{
+        display: flex;
+        flex-direction: row;
+    }
+    .why-us .row img{
+        height: 250px;
+    }
+    
+}
+
+
+@media screen and (min-width:480px) {
+    .container{
+        max-width: 100%;
+        width: 100%;
+    }
+    .row{
         display: flex;
         flex-direction: column;
         justify-content: space-between;
     }
-    .col img{
-      height: 190px;
+    .row .col{
+        display: flex;
+        justify-content: center;
+        width: 80%;
+        margin: 0 auto;
+    }
+    .row .col .card{
+        margin: 10px auto;
+        padding: 10px;
+    }
+    .card img{
+        padding-top: 10px;
+    }
+
+    .why-us .row img{
+        margin-bottom: 40px;
     }
 }
